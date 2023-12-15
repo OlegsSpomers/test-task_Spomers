@@ -16,7 +16,7 @@ describe('template spec', () => {
     const username = getUserName()
     const ordername = getOrderName()
 
-    it.only('User Sign Up and Log In', () => {
+    it('User Sign Up and Log In', () => {
         homePage.open()
         homePage.clickOnSignUp()
         homePage.sendSignUpForm(username)
