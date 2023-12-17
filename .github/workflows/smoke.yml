@@ -1,16 +1,14 @@
-name: 'Smoke Run'
-
-on:
-  workflow_dispatch:
-
+name: Daily run
+on: workflow_dispatch:
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
+    name: Run and save artifacts
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Cypress run
-        uses: cypress-io/github-action@v6
+      - uses: actions/checkout@v4
+      - uses: cypress-io/github-action@v6
+      - uses: actions/upload-artifact@v3
         with:
-          browser: chrome
-          headed: false
+          name: cypress-screenshots
+          path: cypress/screenshots
+          if-no-files-found: ignore
