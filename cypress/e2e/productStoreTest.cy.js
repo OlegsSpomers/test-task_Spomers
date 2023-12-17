@@ -1,5 +1,5 @@
-const homePage = require('../pages/homePage')
-const cartPage = require('../pages/cart')
+const homePage = require('../support/step_definitions/pages/homePage')
+const cartPage = require('../support/step_definitions/pages/cart')
 
 function getUserName() {
     const timeStamp = Math.floor(Math.random() * 10000);

@@ -1,3 +1,4 @@
+import { When, Then, And, Given } from "@badeball/cypress-cucumber-preprocessor";
 class homePage {
   elements = {
     signUp: {
@@ -88,6 +89,23 @@ class homePage {
     this.elements.filterPhoneCaterogy.firstDeviceInTheList().click()
     this.elements.filterPhoneCaterogy.openedFirstDevice().should('contain', 'Apple monitor 24')
   }
+
+
+
+  When("i visit homepage", function() {
+    cy.visit('https://www.demoblaze.com/')
+    this.clickOnSignUp()
+  });
+
+
 }
 
 module.exports = new homePage();
+
+
+
+
+
+// And("i can click sign up button", function () {
+//   this.clickOnSignUp()
+// });
