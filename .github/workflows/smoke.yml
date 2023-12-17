@@ -3,6 +3,9 @@ name: 'Smoke Run'
 on:
   workflow_dispatch:
 
+  schedule:
+  - cron: "30 21 * * 7" # Every Sunday at 9:30pm
+
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
