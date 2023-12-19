@@ -16,17 +16,17 @@ class homePage {
     },
 
     filterPhoneCaterogy: {
-      buttonPhones: () => cy.get('.list-group .list-group-item:nth-of-type(2)'),
-      firstDeviceInTheList: () => cy.get('div#tbodyid > div:nth-of-type(1) .hrefch'),
+      buttonPhones: () => cy.get('.list-group-item').contains('Phones'),
+      firstDeviceInTheList: () => cy.get('.card-block').first().find('a'),
       openedFirstDevice: () => cy.get('#tbodyid')
     },
 
     filterLaptopsCategory: {
-      buttonLaptops: () => cy.get('.list-group > a:nth-of-type(3)'),
+      buttonLaptops: () => cy.get('.list-group-item').contains('Laptops'),
     },
 
     filterMonitorsCategory: {
-      buttonMonitors: () => cy.get('.list-group > a:nth-of-type(4)'),
+      buttonMonitors: () => cy.get('.list-group-item').contains('Monitors'),
     },
 
     navigationBar: {
