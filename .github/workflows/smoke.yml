@@ -2,8 +2,8 @@ name: 'Smoke Run'
 
 on:
   workflow_dispatch:
-  schedule:
-   - cron: "30 21 * * 0" # Every Sunday at 9:30pm
+#  schedule:
+#   - cron: "30 21 * * 0" # Every Sunday at 9:30pm
 
 jobs:
   cypress-run:
